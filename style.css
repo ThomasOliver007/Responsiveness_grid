@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: rgb(51, 184, 237);
+}
+h1 {
+  font-size: 50px;
+  padding: 20px;
+}
+.style__me {
+  color: rgb(239, 152, 30);
+}
+.subtitle__style {
+  margin-left: 20px;
+  margin-right: 20px;
+  background: rgb(171, 217, 245);
+  padding: 8px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "img bio bio"
+    "box1 box2 box3";
+  padding: 20px;
+}
+.profile__img {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bio__text {
+  grid-area: bio;
+}
+.jobs__style--left {
+  grid-area: box1;
+  padding: 10px;
+  background: rgb(106, 189, 241);
+  border-bottom: 4px solid rgb(239, 152, 30);
+  margin: 10px;
+}
+.jobs__style--center {
+  grid-area: box2;
+  padding: 10px;
+  background: rgb(106, 189, 241);
+  border-bottom: 4px solid rgb(239, 152, 30);
+  margin: 10px;
+}
+.jobs__style--right {
+  grid-area: box3;
+  padding: 10px;
+  background: rgb(106, 189, 241);
+  border-bottom: 4px solid rgb(239, 152, 30);
+  margin: 10px;
+}
+img {
+  border-radius: 50%;
+  width: 50%;
+  border: 2px solid rgb(239, 152, 30);
+  object-fit: cover;
+}
+.bio__style {
+  padding-bottom: 20px;
+  color: rgb(239, 152, 30);
+  font-size: 25px;
+}
+
+.copyright__style {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: rgb(30, 151, 199);
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "bio" "bio" "box1" "box2" "box3";
+  }
+}
